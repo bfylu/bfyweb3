@@ -1,6 +1,6 @@
 package cn.univyz.bfyweb3.controller;
 
-import cn.univyz.bfyweb3.model.customer;
+import cn.univyz.bfyweb3.model.Customer;
 import cn.univyz.bfyweb3.service.CustomerService;
 import cn.univyz.framework.annotation.Action;
 import cn.univyz.framework.annotation.Controller;
@@ -26,10 +26,10 @@ public class CustomerController {
      * 进入客户列表界面
      */
 
-    @Action("get:/customer")
+    @Action("get:/Customer")
     public View index(Param param){
-        List<customer> customerList = customerService.getCustomerList();
-        return new View("customer.jsp").addModel("customerList",customerList);
+        List<Customer> customerList = customerService.getCustomerList();
+        return new View("Customer.jsp").addModel("customerList",customerList);
 
     }
 
@@ -40,8 +40,8 @@ public class CustomerController {
     @Action("get:/customer_show")
     public View show(Param param){
         long id=param.getLong("id");
-        customer Customer = customerService.getCustomer(id);
-        return new View("customer_show.jsp").addModel("customer",Customer);
+        Customer customer = customerService.getCustomer(id);
+        return new View("customer_show.jsp").addModel("customer",customer);
 
     }
 
@@ -72,7 +72,7 @@ public class CustomerController {
     @Action("get:/customer_edit")
     public View edit(Param param){
         long id = param.getLong("id");
-        customer Customer=customerService.getCustomer(id);
+        Customer Customer=customerService.getCustomer(id);
         return new View("customer_edit.jsp").addModel("customer",Customer);
     }
 

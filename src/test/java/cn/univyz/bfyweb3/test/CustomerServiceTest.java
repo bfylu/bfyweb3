@@ -1,7 +1,7 @@
 package cn.univyz.bfyweb3.test;
 
 
-import cn.univyz.bfyweb3.model.customer;
+import cn.univyz.bfyweb3.model.Customer;
 import cn.univyz.bfyweb3.service.CustomerService;
 import cn.univyz.framework.helper.DatabaseHelper;
 import org.junit.Assert;
@@ -28,18 +28,17 @@ public class CustomerServiceTest {
     public void init() throws Exception {
         //TODO 初始化数据库
         DatabaseHelper.executeSqlFile("sql/customer_init.sql");
-
     }
     @Test
     public void getCustomerListText() throws Exception{
-        List<customer> customerList = customerService.getCustomerList();
+        List<Customer> customerList = customerService.getCustomerList();
         Assert.assertEquals(2,customerList.size());
     }
 
     @Test
     public  void getCustomerTest() throws Exception{
         long id=1;
-        customer customer = customerService.getCustomer(id);
+        Customer customer = customerService.getCustomer(id);
         Assert.assertNotNull(customer);
     }
 

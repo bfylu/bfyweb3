@@ -16,6 +16,4 @@ public class HelloServlet  {
         DateFormat dateFormat =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currentTime = dateFormat.format(new Date());
 
-
-
 }

@@ -3,7 +3,7 @@ package cn.univyz.bfyweb3.model;
 /**
  * 客户
  */
-public class customer {
+public class Customer {
     /**
      * ID
      */

@@ -14,7 +14,7 @@
         <dependency>
             <groupId>cn.univyz</groupId>
             <artifactId>univyz-framework</artifactId>
-            <version>1.0.3</version>
+            <version>1.1.5</version>
         </dependency>
 
         <!--使用JUnit作为单元测试框架-->
